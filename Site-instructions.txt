@@ -1,0 +1,9 @@
+colour pallete only : #ffffffff
+#0f1212ff
+
+
+
+text font only poppins and normal no bolds
+
+
+site theme: light only

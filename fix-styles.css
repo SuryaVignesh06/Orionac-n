@@ -1,0 +1,232 @@
+/* ---- UI FINAL ADJUSTMENTS ---- */
+/* LiftUP Section with GenAI Background */
+#liftup {
+    position: relative;
+    padding: 8rem 2rem;
+    background: url('liftup-bg.png') center/cover no-repeat;
+    background-attachment: fixed;
+    /* Creates professional depth feeling */
+    overflow: hidden;
+    color: #fff;
+    border-top: 1px solid #1a1a1a;
+}
+
+.liftup-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(5, 5, 5, 0.85) 0%, rgba(10, 10, 13, 0.7) 100%);
+    /* sophisticated dark slate blend */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.liftup-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.liftup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.liftup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* LiftUp Typography Adjustments */
+.gradient-text-anim {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin: 1.5rem 0;
+    background: linear-gradient(to right, #fff, #a5b4fc, #c4b5fd, #fff);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shineText 4s linear infinite;
+}
+
+.liftup-description {
+    font-size: 1.15rem;
+    color: #d1d5db;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+}
+
+.liftup-card-stack {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+}
+
+.liftup-card {
+    position: absolute;
+    width: 90%;
+    height: 320px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.card-back {
+    background: #111;
+    transform: translateZ(-80px) translateY(-25px) translateX(-10px) rotateX(10deg);
+    opacity: 0.5;
+}
+
+.card-mid {
+    background: #1a1a1a;
+    transform: translateZ(-40px) translateY(-10px) translateX(-5px) rotateX(5deg);
+    opacity: 0.8;
+}
+
+.card-front {
+    background: rgba(13, 17, 23, 0.95);
+    backdrop-filter: blur(10px);
+    transform: translateZ(0) translateY(0) rotateX(0);
+    border: 1px solid #30363d;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .liftup-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gradient-text-anim {
+        font-size: 3rem;
+    }
+}
+
+/* Join Our Team Original Colors + New Styling */
+#join-team {
+    position: relative;
+    padding: 8rem 2rem;
+    background: #fafcfc;
+    /* restored exact light modern palette */
+    text-align: center;
+    overflow: hidden;
+    color: #111;
+    /* dark text */
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #eee;
+}
+
+.join-team-particles {
+    display: none;
+    /* turning off particle overlay for clean corporate theme */
+}
+
+.join-team-container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-team-headline {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    color: #1a1a1a;
+}
+
+.join-team-headline span {
+    color: #b45309;
+    /* exact color the site uses as accent */
+    position: relative;
+}
+
+.join-team-description {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.btn-join-team {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: #111;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    /* matching other btns on original site layout */
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-join-team:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: #000;
+}
+
+.bronn-badge {
+    color: #db2777 !important;
+    background-color: #fce7f3 !important;
+    border: none !important;
+}
+
+/* Footer Marquee Inline */
+.marquee-content-inline {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+    color: #444;
+    /* darker for high contrast modern outline look */
+    font-weight: 900;
+    font-size: 3rem;
+    /* extremely large text outline for luxurious feel */
+    letter-spacing: 4px;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    /* hollow feel */
+    color: transparent !important;
+    transition: opacity 0.3s;
+}
+
+.marquee-content-inline span {
+    padding: 0 2rem;
+}
+
+.marquee-content-inline .separator {
+    -webkit-text-stroke: 0;
+    color: #333 !important;
+}
+
+.footer-social-marquee-container {
+    margin-bottom: -10px;
+    /* pull closer to copyright line naturally */
+}

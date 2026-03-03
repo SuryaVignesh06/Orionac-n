@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orionac - Research First</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=20260303">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Orionac Logo" class="logo-img">
+        </div>
+        <nav class="nav-links">
+            <a href="#hero">PRODUCT</a>
+            <a href="#bronn-section">SOLUTIONS</a>
+            <a href="#hero">RESEARCH</a>
+            <a href="#bronn-section">EDUCATION</a>
+            <a href="#hero">COMPANY</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="#" class="btn-dark">CONTACT</a>
+        </div>
+    </header>
+
+    <main class="hero" id="hero">
+        <h1 class="hero-title"><span id="hero-typing-text"></span><span class="typing-cursor" id="hero-cursor"></span>
+        </h1>
+        <div class="hero-bottom scroll-reveal" id="hero-bottom-reveal">
+            <p class="hero-description">Evaluate, implement, and scale the best research-driven solutions for your
+                business. If you can envision it, we can build it.</p>
+            <a href="#" class="btn-dark btn-demo">BOOK A DEMO &rarr;</a>
+        </div>
+
+        <div class="hero-visual scroll-reveal" id="hero-visual-reveal">
+            <div class="ai-mockup-wrapper">
+                <div class="ai-mockup">
+                    <header class="ai-mockup-header">
+                        <div class="ai-mockup-icon-wrapper" style="box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="4" x2="12" y2="20"></line>
+                                <line x1="4" y1="12" x2="20" y2="12"></line>
+                                <line x1="6.34" y1="6.34" x2="17.66" y2="17.66"></line>
+                                <line x1="6.34" y1="17.66" x2="17.66" y2="6.34"></line>
+                            </svg>
+                        </div>
+                        <div class="ai-mockup-header-right">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                            </svg>
+                            <div class="ai-mockup-avatar">JD</div>
+                        </div>
+                    </header>
+
+                    <div class="ai-mockup-body" style="padding-top: 1rem;">
+                        <h2 style="font-weight: 400; font-size: 2.8rem; margin-bottom: 0.5rem;">Good morning, ready to
+                            research?</h2>
+                        <p style="margin-bottom: 2rem;">Ask Orion about competitors, market trends, or industry data.
+                        </p>
+                        <div class="ai-skeleton"
+                            style="margin: 0 auto; max-width: 300px; justify-content: center; opacity: 0.3; margin-bottom: 2rem;">
+                            <div class="skeleton-circle" style="width: 24px; height: 24px; min-width: 24px;"></div>
+                            <div class="skeleton-lines" style="max-width: 200px;">
+                                <div class="skeleton-line-long" style="height: 10px;"></div>
+                                <div class="skeleton-line-short" style="height: 10px; width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ai-mockup-footer">
+                        <div class="ai-chips">
+                            <button><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#666"
+                                    stroke-width="2">
+                                    <line x1="12" y1="4" x2="12" y2="20"></line>
+                                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                                    <line x1="6.34" y1="6.34" x2="17.66" y2="17.66"></line>
+                                    <line x1="6.34" y1="17.66" x2="17.66" y2="6.34"></line>
+                                </svg> Competitor Comparison</button>
+                            <button><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#666"
+                                    stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="14" width="7" height="7"></rect>
+                                    <rect x="3" y="14" width="7" height="7"></rect>
+                                </svg> SWOT Analysis</button>
+                            <button><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#666"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                </svg> Market Size Estimation</button>
+                            <button><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#666"
+                                    stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg> Consumer Trends</button>
+                        </div>
+
+                        <div class="ai-input-container" style="max-width: 760px; margin: 0 auto 1.5rem auto;">
+                            <svg class="attach-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#bbb" stroke-width="2">
+                                <line x1="12" y1="4" x2="12" y2="20"></line>
+                                <line x1="4" y1="12" x2="20" y2="12"></line>
+                                <line x1="6.34" y1="6.34" x2="17.66" y2="17.66"></line>
+                                <line x1="6.34" y1="17.66" x2="17.66" y2="6.34"></line>
+                            </svg>
+                            <input type="text"
+                                placeholder="Ask Orion about competitors, market trends, or industry data...">
+                            <button class="ai-submit-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="19" x2="12" y2="5"></line>
+                                    <polyline points="5 12 12 5 19 12"></polyline>
+                                </svg></button>
+                        </div>
+                        <p class="ai-disclaimer"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" style="margin-right: 4px;">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg> AI can make mistakes. Please review generated insights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="about-us" class="about-section parallax-container">
+        <!-- Middle Layer: Core Copy -->
+        <div class="parallax-layer content-layer" id="parallax-content">
+            <div class="about-content">
+                <span class="bronn-badge"
+                    style="background: linear-gradient(90deg, #e0e7ff, #fce7f3); color: #111; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">WHO
+                    WE ARE & WHAT WE DO</span>
+                <h2>Research-focused technology organization.</h2>
+                <p>We are essentially a research-focused technology organization mainly focused on the innovation and
+                    development of advanced AI concepts and intelligent agents.</p>
+                <div class="supported-by-label" style="margin-top: 3rem;">
+                    <h3 style="font-size: 2.2rem; color: #fff; font-weight: 600; line-height: 1.2;">Part of the World's
+                        Largest Startups Eco System</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Foreground Layer: White Supporters Panel (Static) -->
+        <div class="supporters-panel" id="static-supporters">
+            <h3 class="supporters-heading">About our supporters</h3>
+            <div class="supporters-logos triangle-layout">
+                <!-- Top peak of triangle -->
+                <div class="triangle-row top-row">
+                    <div class="supporter-item google-logo">
+                        <img src="google-logo.png" alt="Google for Startups">
+                        <span class="supporter-caption">Ecosystem Member</span>
+                    </div>
+                </div>
+                <!-- Bottom base of triangle -->
+                <div class="triangle-row bottom-row">
+                    <div class="supporter-item aws-logo">
+                        <img src="aws-logo.png" alt="AWS Activate">
+                        <span class="supporter-caption">AWS Activate Partner</span>
+                    </div>
+                    <div class="supporter-item">
+                        <img src="nvidia-logo.png" alt="NVIDIA Inception">
+                        <span class="supporter-caption">Accelerated Startup</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bronn-section" id="bronn-section">
+        <div class="bronn-container" style="flex-direction: column; align-items: center; text-align: center;">
+            <div class="bronn-content scroll-reveal" id="bronn-content-reveal"
+                style="align-items: center; max-width: 800px; margin: 0 auto 3rem auto;">
+                <span class="bronn-badge" style="align-self: center;">COMING SOON</span>
+                <h1 class="huge-bronn-headline">BRONN</h1>
+                <h2 style="font-size: 2.5rem; margin-top: -1rem;">Your Adaptive Research Partner.</h2>
+            </div>
+
+            <div class="bronn-visual" id="bronn-visual-section" style="position: relative;">
+                <!-- Overlay for cinematic dimming effect -->
+                <div id="cinematic-overlay" class="cinematic-overlay hidden"></div>
+
+                <div id="bronn-floating-input"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 900px; max-width: 90%; z-index: 20; opacity: 0; transition: opacity 0.5s ease;">
+                    <div class="ai-input-container"
+                        style="box-shadow: 0 20px 40px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.1); background: #1a1a1a; border-radius: 16px;">
+                        <svg class="attach-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#888"
+                            stroke-width="2">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48">
+                            </path>
+                        </svg>
+                        <input type="text" id="bronn-floating-auto-input" readonly
+                            placeholder="Type your research prompt..."
+                            style="padding: 1rem; font-size: 1rem; color: #fff; background: transparent;">
+                        <button class="ai-submit-btn" id="bronn-floating-submit"><svg width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="19" x2="12" y2="5"></line>
+                                <polyline points="5 12 12 5 19 12"></polyline>
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="macbook-window" id="bronn-macbook-window"
+                    style="opacity: 0; transition: opacity 0.8s ease;">
+                    <div class="macbook-header">
+                        <div class="mac-dots">
+                            <span class="mac-dot close"></span>
+                            <span class="mac-dot minimize"></span>
+                            <span class="mac-dot maximize"></span>
+                        </div>
+                    </div>
+                    <div class="macbook-content" id="macbook-content-area" style="position: relative;">
+                        <header class="ai-mockup-header">
+                            <div class="ai-mockup-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 3v18M3 12h18m-4.5-5.5L7.5 16.5M7.5 7.5l9 9" />
+                                </svg>
+                            </div>
+                            <div class="ai-mockup-header-right">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#666"
+                                    stroke-width="2">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>
+                                <div class="ai-mockup-avatar">JD</div>
+                            </div>
+                        </header>
+
+                        <div class="ai-mockup-body"
+                            style="padding-top: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+
+                            <!-- State 1: Empty / Waiting -->
+                            <div id="bronn-initial-state" style="text-align: center; color: #aaa;">
+                                <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: #fff;">Ready to research?
+                                </h2>
+                                <p style="margin-bottom: 2rem; color: #aaa;">Ask Bronn about competitors, market trends,
+                                    or industry data.</p>
+                                <div class="ai-skeleton" style="margin: 0 auto; max-width: 300px;">
+                                    <div class="skeleton-circle"></div>
+                                    <div class="skeleton-lines">
+                                        <div class="skeleton-line-long"></div>
+                                        <div class="skeleton-line-short"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- State 2: Analyzing -->
+                            <div id="bronn-analyzing-loader" class="hidden" style="text-align: center;">
+                                <div class="typing-indicator" style="justify-content: center; margin-bottom: 1.5rem;">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <p style="color: #ccc; font-size: 1rem; margin-bottom: 0; font-weight: 500;">
+                                    Synthesizing intelligence...</p>
+                            </div>
+
+                            <!-- State 4: Results 2 (Dark Grid Dashboard) -->
+                            <div id="bronn-results-view-2" class="hidden bronn-results-state"
+                                style="width: 100%; height: 100%;">
+                                <div class="dashboard-layout"
+                                    style="display: flex; gap: 12px; height: 100%; width: 100%;">
+                                    <div class="dash-sidebar"
+                                        style="width: 40px; background: #2a2a2a; border: 1px solid #333; border-radius: 12px; display: flex; flex-direction: column; align-items: center; padding: 10px 0; gap: 8px;">
+                                        <div
+                                            style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid #555; margin-bottom: 20px;">
+                                        </div>
+                                        <div style="width: 20px; height: 10px; background: #555; border-radius: 4px;">
+                                        </div>
+                                        <div style="width: 20px; height: 10px; background: #555; border-radius: 4px;">
+                                        </div>
+                                        <div style="width: 20px; height: 10px; background: #555; border-radius: 4px;">
+                                        </div>
+                                        <div style="width: 20px; height: 10px; background: #555; border-radius: 4px;">
+                                        </div>
+                                        <div style="width: 20px; height: 10px; background: #555; border-radius: 4px;">
+                                        </div>
+                                        <div style="width: 20px; height: 10px; background: #555; border-radius: 4px;">
+                                        </div>
+                                        <div
+                                            style="margin-top: auto; width: 16px; height: 16px; border-radius: 50%; background: #555;">
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-grid" style="flex: 1;">
+                                        <div class="dash-panel panel-hero">
+                                            <div class="panel-header" style="justify-content: space-between;">
+                                                <div style="font-size: 0.8rem; color: #a3a3a3; font-weight: 500;">Market
+                                                    Share Estimation</div>
+                                                <div class="panel-tabs"><span
+                                                        class="active"></span><span></span><span></span><span></span>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body"
+                                                style="display: flex; align-items: flex-end; gap: 8px; padding: 10px 10px 0 10px; height: 100%; box-sizing: border-box;">
+                                                <div
+                                                    style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; justify-content: flex-end;">
+                                                    <span style="font-size: 0.6rem; color: #888;">12%</span>
+                                                    <div
+                                                        style="width: 100%; background: #444; height: 30%; border-radius: 4px 4px 0 0;">
+                                                    </div>
+                                                    <span style="font-size: 0.5rem; color: #666; margin-top: 2px;">Comp
+                                                        A</span>
+                                                </div>
+                                                <div
+                                                    style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; justify-content: flex-end;">
+                                                    <span style="font-size: 0.6rem; color: #888;">24%</span>
+                                                    <div
+                                                        style="width: 100%; background: #555; height: 50%; border-radius: 4px 4px 0 0;">
+                                                    </div>
+                                                    <span style="font-size: 0.5rem; color: #666; margin-top: 2px;">Comp
+                                                        B</span>
+                                                </div>
+                                                <div
+                                                    style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; justify-content: flex-end;">
+                                                    <span style="font-size: 0.6rem; color: #888;">35%</span>
+                                                    <div
+                                                        style="width: 100%; background: #666; height: 70%; border-radius: 4px 4px 0 0;">
+                                                    </div>
+                                                    <span style="font-size: 0.5rem; color: #666; margin-top: 2px;">Comp
+                                                        C</span>
+                                                </div>
+                                                <div
+                                                    style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; justify-content: flex-end;">
+                                                    <span
+                                                        style="font-size: 0.6rem; color: #c4b5fd; font-weight: bold;">48%</span>
+                                                    <div
+                                                        style="width: 100%; background: #8b5cf6; height: 100%; border-radius: 4px 4px 0 0; box-shadow: 0 -5px 15px rgba(139, 92, 246, 0.3);">
+                                                    </div>
+                                                    <span
+                                                        style="font-size: 0.5rem; color: #c4b5fd; margin-top: 2px; font-weight: bold;">Orionac</span>
+                                                </div>
+                                                <div
+                                                    style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; justify-content: flex-end;">
+                                                    <span style="font-size: 0.6rem; color: #888;">30%</span>
+                                                    <div
+                                                        style="width: 100%; background: #555; height: 60%; border-radius: 4px 4px 0 0;">
+                                                    </div>
+                                                    <span style="font-size: 0.5rem; color: #666; margin-top: 2px;">Comp
+                                                        D</span>
+                                                </div>
+                                                <div
+                                                    style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; justify-content: flex-end;">
+                                                    <span style="font-size: 0.6rem; color: #888;">18%</span>
+                                                    <div
+                                                        style="width: 100%; background: #444; height: 40%; border-radius: 4px 4px 0 0;">
+                                                    </div>
+                                                    <span style="font-size: 0.5rem; color: #666; margin-top: 2px;">Comp
+                                                        E</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="dash-panel panel-side">
+                                            <div class="panel-header" style="margin-bottom: 0.5rem;">
+                                                <div style="font-size: 0.7rem; color: #a3a3a3; font-weight: 500;">Top
+                                                    Features</div>
+                                            </div>
+                                            <div class="panel-list" style="margin-bottom: 0.5rem;">
+                                                <div class="list-item"
+                                                    style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                        stroke="#8b5cf6" stroke-width="2">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    <div style="font-size: 0.65rem; color: #e5e5e5;">AI Integrations
+                                                    </div>
+                                                </div>
+                                                <div class="list-item"
+                                                    style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                        stroke="#8b5cf6" stroke-width="2">
+                                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                                    </svg>
+                                                    <div style="font-size: 0.65rem; color: #e5e5e5;">Real-time Sync
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                style="font-size: 1.1rem; color: #fff; font-weight: 600; margin-bottom: 0.5rem;">
+                                                +24.5% <span style="font-size: 0.6rem; color: #10b981;">&#8593; vs last
+                                                    quarter</span></div>
+                                            <div class="panel-list mt-auto">
+                                                <div class="list-item"
+                                                    style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                                                    <div
+                                                        style="width: 6px; height: 6px; border-radius: 50%; background: #ef4444;">
+                                                    </div>
+                                                    <div style="font-size: 0.6rem; color: #a3a3a3;">Latency Issues</div>
+                                                </div>
+                                                <div
+                                                    style="font-size: 0.65rem; color: #ef4444; padding: 2px 6px; background: rgba(239, 68, 68, 0.1); border-radius: 4px; display: inline-block; width: max-content;">
+                                                    Needs attention</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="dash-panel panel-bottom-1"
+                                            style="display: flex; flex-direction: column; justify-content: space-between;">
+                                            <div class="panel-header flex-start" style="margin-bottom: 4px;">
+                                                <div style="font-size: 0.6rem; color: #888;">User Retention</div>
+                                            </div>
+                                            <div class="panel-content-flex"
+                                                style="flex-direction: column; align-items: flex-start; gap: 2px;">
+                                                <div style="font-size: 1.2rem; color: #fff; font-weight: 600;">89.2%
+                                                </div>
+                                                <div style="font-size: 0.6rem; color: #10b981;">+4.1% MoM</div>
+                                            </div>
+                                            <div class="panel-footer-flex"
+                                                style="margin-top: auto; gap: 4px; display: flex; width: 100%;">
+                                                <div
+                                                    style="font-size: 0.55rem; color: #fff; background: #8b5cf6; padding: 2px 4px; border-radius: 2px; flex: 1; text-align: center;">
+                                                    Q1</div>
+                                                <div
+                                                    style="font-size: 0.55rem; color: #888; background: #333; padding: 2px 4px; border-radius: 2px; flex: 1; text-align: center;">
+                                                    Q2</div>
+                                                <div
+                                                    style="font-size: 0.55rem; color: #888; background: #333; padding: 2px 4px; border-radius: 2px; flex: 1; text-align: center;">
+                                                    Q3</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="dash-panel panel-bottom-2">
+                                            <div class="panel-header flex-between" style="margin-bottom: 4px;">
+                                                <div style="font-size: 0.65rem; color: #a3a3a3; font-weight: 500;">
+                                                    Active Users</div>
+                                            </div>
+                                            <div class="panel-body" style="flex: 1; margin-top: 4px; padding-top: 4px;">
+                                                <div style="font-size: 1.3rem; color: #fff; font-weight: 600;">142.5K
+                                                </div>
+                                                <div style="font-size: 0.6rem; color: #888; margin-top: 2px;">Global
+                                                    Audience</div>
+                                            </div>
+                                            <div class="panel-footer-flex flex-start" style="margin-top: auto;">
+                                                <div
+                                                    style="width: 100%; height: 4px; background: #333; border-radius: 2px; overflow: hidden;">
+                                                    <div style="width: 75%; height: 100%; background: #8b5cf6;"></div>
+                                                </div>
+                                                <div style="font-size: 0.55rem; color: #888; margin-top: 4px;">Goal:
+                                                    200K</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="dash-panel panel-bottom-3 flex-center">
+                                            <div class="panel-header flex-between w-100" style="margin-bottom: 8px;">
+                                                <div style="font-size: 0.65rem; color: #a3a3a3; font-weight: 500;">
+                                                    Sentiment Analysis</div>
+                                            </div>
+                                            <div class="circle-chart"
+                                                style="position: relative; width: 60px; height: 60px; border-radius: 50%; background: conic-gradient(#8b5cf6 0% 70%, #333 70% 100%); display: flex; align-items: center; justify-content: center; align-self: center;">
+                                                <div
+                                                    style="width: 46px; height: 46px; border-radius: 50%; background: #2a2a2a; display: flex; align-items: center; justify-content: center;">
+                                                    <span
+                                                        style="font-size: 0.75rem; color: #fff; font-weight: 600;">70%</span>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-2px); width: 6px; height: 6px; background: #fff; border-radius: 50%; box-shadow: 0 0 4px rgba(0,0,0,0.5);">
+                                                </div>
+                                            </div>
+                                            <div class="panel-footer-spread w-100"
+                                                style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.55rem;">
+                                                <div style="color: #10b981;">Positive</div>
+                                                <div style="color: #64748b;">Neutral</div>
+                                                <div style="color: #ef4444;">Negative</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ai-mockup-footer" id="bronn-footer"
+                            style="margin-top: auto; padding-top: 1.5rem; position: relative; opacity: 0;">
+                            <div class="ai-input-container" id="cinematic-input">
+                                <svg class="attach-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="#888" stroke-width="2">
+                                    <path
+                                        d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48">
+                                    </path>
+                                </svg>
+                                <input type="text" id="bronn-auto-input" readonly
+                                    placeholder="Ask Bronn about competitors, market trends..."
+                                    style="padding: 0.75rem;">
+                                <button class="ai-submit-btn" id="bronn-auto-submit"><svg width="16" height="16"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="19" x2="12" y2="5"></line>
+                                        <polyline points="5 12 12 5 19 12"></polyline>
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="bronn-content-bottom" style="max-width: 650px; text-align: center; margin: 2rem auto 0 auto;">
+            <p style="margin-bottom: 2.5rem; color: #555; font-size: 1.1rem; line-height: 1.6;">Bronn is currently in
+                development. Soon, it will seamlessly integrate with your workflow, providing context-aware insights and
+                real-time data processing to elevate your research.</p>
+            <a href="#" class="btn-dark btn-bronn" style="display: inline-block;">JOIN WAITLIST &rarr;</a>
+        </div>
+        </div>
+    </section>
+
+    <!-- LiftUP Section -->
+    <section class="liftup-section scroll-reveal" id="liftup">
+        <div class="liftup-backdrop">
+            <!-- Decorative background elements -->
+            <div class="liftup-glow-1"></div>
+            <div class="liftup-glow-2"></div>
+            <div class="liftup-grid-bg"></div>
+        </div>
+        <div class="liftup-container">
+            <div class="liftup-grid">
+                <!-- Left Content -->
+                <div class="liftup-content">
+                    <div class="liftup-branding" style="margin-bottom: 2rem;">
+                        <h2 class="liftup-logo" style="margin:0; font-size:1.2rem; color:#111; text-shadow: none;">
+                            LiftUP</h2>
+                        <p class="liftup-subtitle" style="margin:0; font-size:0.75rem; letter-spacing:1px; color:#444;">
+                            SOFTWARE DEVELOPMENT COHORT</p>
+
+                        <h1 class="liftup-headline gradient-text-anim">ELEVATE.<br>INNOVATE.<br>LEAD.</h1>
+
+                        <p class="liftup-description">Launch your career at the forefront of AI innovation. Build
+                            scaleable
+                            systems, train state-of-the-art models, and join India's most elite cohort.</p>
+
+                        <div class="liftup-actions">
+                            <a href="#" class="btn-liftup">
+                                <span>Apply Now</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                            <a href="#" class="btn-liftup-outline">Curriculum</a>
+                        </div>
+
+                        <div class="liftup-stats"
+                            style="display:flex; gap: 2rem; margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; justify-content: center;">
+                            <div>
+                                <div style="font-size: 2rem; font-weight:700; color:#fff;">10k+</div>
+                                <div style="font-size: 0.8rem; color:#888;">Applications</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 2rem; font-weight:700; color:#fff;">98%</div>
+                                <div style="font-size: 0.8rem; color:#888;">Placement Rate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Graphic: India Map with Dither Effect -->
+
+                </div>
+    </section>
+
+
+    <!-- Join Our Team Section -->
+    <section class="join-team-section" id="join-team">
+        <div class="join-team-particles"></div>
+        <div class="join-team-container scroll-reveal">
+            <span class="bronn-badge"
+                style="background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2);">CAREERS</span>
+            <h2 class="join-team-headline">Join Our <span>Team</span></h2>
+            <p class="join-team-description">We're building the future of research intelligence. If you're passionate
+                about AI, data, and pushing boundaries — your desk is ready.</p>
+            <!-- Animated arrow indicator -->
+            <div class="join-arrow-indicator" aria-hidden="true">
+                <svg class="join-arrow-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="4" x2="12" y2="16"></line>
+                    <polyline points="7 12 12 18 17 12"></polyline>
+                </svg>
+            </div>
+            <a href="mailto:careers@orionac.in" class="btn-join-team">VIEW OPEN POSITIONS <svg width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <!-- ORIONAC Marquee strip at very top of footer -->
+        <div class="footer-marquee-strip" aria-hidden="true">
+            <div class="footer-marquee-track">
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <!-- duplicate for seamless loop -->
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+            </div>
+        </div>
+        <div class="footer-container">
+            <!-- Top Section: Brand + Nav Columns -->
+            <div class="footer-top">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap">
+                        <img src="footer.png" alt="Orionac Logo" class="footer-logo-img">
+                    </div>
+                    <p class="footer-tagline">RESEARCH FIRST. AI ALWAYS.</p>
+                    <p class="footer-brand-desc">Building the next generation of AI-first research tools and developer
+                        talent from India to the world.</p>
+                    <div class="footer-social-row">
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="X (Twitter)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="GitHub">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Instagram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nav Columns -->
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <div class="col-title">COMPANY</div>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Press</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="col-title">PRODUCTS</div>
+                        <a href="#">Bronn AI</a>
+                        <a href="#">LiftUP Cohort</a>
+                        <a href="#">Enterprise API</a>
+                        <a href="#">Research Hub</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="col-title">RESOURCES</div>
+                        <a href="#">Documentation</a>
+                        <a href="#">Research Papers</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Open Source</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <p class="copyright">&copy; 2026 Orionac Technologies Pvt. Ltd. &mdash; Made in India</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="dist/index.js?v=20260303"></script>
+    <script src="dither.js"></script>
+</body>
+
+</html>
