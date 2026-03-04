@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Orionac - Research First</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            background-color: #ffffff;
+            /* Pure white */
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .staggered-section {
+            min-height: 100vh;
+            padding: 120px 5rem 60px;
+            /* Reduced vertical padding */
+            color: #000;
+            position: relative;
+        }
+
+        .staggered-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Two main columns */
+            gap: 1rem 3rem;
+            /* Tighter gap */
+            align-items: center;
+            /* PERFECTLY aligns image and text vertically */
+        }
+
+        .title-area {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            /* Minimal space below title row */
+        }
+
+        .staggered-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 5.5rem;
+            /* Adjusted for Poppins */
+            font-weight: 500;
+            line-height: 1;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: -2px;
+            white-space: nowrap;
+        }
+
+        .elegant-animation {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+            /* Stretch across the rest of the row */
+        }
+
+        .elegant-animation .circle {
+            width: 10px;
+            height: 10px;
+            background: #0ea5e9;
+            border-radius: 50%;
+            animation: pulseShape 2s infinite alternate;
+        }
+
+        .elegant-animation .line {
+            height: 1px;
+            background: #000;
+            flex: 1;
+            opacity: 0.2;
+            transform-origin: left;
+            animation: stretchLine 3.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseShape {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 1;
+                box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
+            }
+        }
+
+        @keyframes stretchLine {
+            0% {
+                transform: scaleX(0.1);
+                opacity: 0.1;
+            }
+
+            100% {
+                transform: scaleX(1);
+                opacity: 0.4;
+            }
+        }
+
+        /* Ambient empty space animation */
+        .floating-orb {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px dashed rgba(139, 92, 246, 0.3);
+            animation: floatOrb 10s ease-in-out infinite;
+            position: relative;
+        }
+
+        .floating-orb::after {
+            content: '';
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            right: 25%;
+            bottom: 25%;
+            border-radius: 50%;
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            animation: pulseShape 4s infinite alternate-reverse;
+        }
+
+        @keyframes floatOrb {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.05) rotate(180deg);
+            }
+        }
+
+        /* Left Column Media Container */
+        .left-media-space {
+            grid-column: 1 / 2;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .left-media-space .floating-orb {
+            position: absolute;
+            z-index: 0;
+            top: 10%;
+            left: 5%;
+            opacity: 0.8;
+            width: 200px;
+            height: 200px;
+        }
+
+        .left-media-space .staggered-image {
+            position: relative;
+            z-index: 1;
+            max-width: 90%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            object-fit: cover;
+            display: block;
+        }
+
+        .staggered-text {
+            grid-column: 2 / 3;
+            max-width: 520px;
+            margin-bottom: 2rem;
+            padding-top: 0;
+            /* Removed aggressive padding/spacing */
+        }
+
+        .staggered-text p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Fade-In Blur Animation */
+        .fade-in-blur {
+            opacity: 0;
+            filter: blur(10px);
+            animation: fadeInBlur 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        }
+
+        /* Stagger the text reveal slightly after the heading */
+        .fade-in-blur.delay-1 {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes fadeInBlur {
+            0% {
+                opacity: 0;
+                filter: blur(10px);
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                filter: blur(0px);
+                transform: translateY(0);
+            }
+        }
+
+        /* Map Marker Pulse */
+        @keyframes markerPulse {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        /* Replaced legacy image wrap */
+
+        /* Fade-In Blur Animation */
+        .fade-in-blur {
+            opacity: 0;
+            filter: blur(10px);
+            animation: fadeInBlur 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        }
+
+        /* Stagger the text reveal slightly after the heading */
+        .fade-in-blur.delay-1 {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes fadeInBlur {
+            0% {
+                opacity: 0;
+                filter: blur(10px);
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                filter: blur(0px);
+                transform: translateY(0);
+            }
+        }
+
+        /* Map Marker Pulse */
+        @keyframes markerPulse {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        /* Vision Gradient Container */
+        .vision-banner {
+            width: 100%;
+            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 25%, #8b5cf6 50%, #d946ef 100%);
+            padding: 120px 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .vision-banner h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 5rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        /* Nav actions fix since navbar is white */
+        .btn-dark {
+            background-color: #030303;
+            color: #fff !important;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 1200px) {
+            .staggered-title {
+                font-size: 4.5rem;
+            }
+
+            .vision-banner h1 {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .staggered-section {
+                padding: 120px 2rem 40px;
+            }
+
+            .staggered-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .title-area {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .staggered-title {
+                font-size: 3.5rem;
+                white-space: normal;
+                grid-column: 1 / -1;
+            }
+
+            .elegant-animation {
+                display: none;
+            }
+
+            .left-media-space {
+                grid-column: 1 / -1;
+                margin-top: 2rem;
+                padding-top: 0;
+            }
+
+            .staggered-text {
+                grid-column: 1 / -1;
+                max-width: 100%;
+            }
+
+            .vision-banner {
+                padding: 80px 2rem;
+            }
+
+            .vision-banner h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* New Sections CSS */
+        .values-section,
+        .leadership-section {
+            padding: 80px 5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: -1.5px;
+            margin: 0 0 1rem 0;
+            line-height: 1.1;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Core Values Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+        }
+
+        /* ANIMATED SHINE BORDER LOGIC */
+        @property --shine-angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        @keyframes shineBorderAnim {
+            0% {
+                --shine-angle: 0deg;
+            }
+
+            100% {
+                --shine-angle: 360deg;
+            }
+        }
+
+        .value-card {
+            border: 1px solid transparent;
+            /* Magic UI needs transparent border */
+            padding: 3rem 2.5rem;
+            position: relative;
+            background: #fff;
+            /* Main bg */
+            background-clip: padding-box;
+            /* Crucial for transparent border overlay */
+            transition: all 0.4s ease;
+            border-radius: 12px;
+            z-index: 1;
+        }
+
+        /* Static base border */
+        .value-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            /* Matches 1px border */
+            border-radius: 13px;
+            /* 12px + 1 */
+            background: #eaeaea;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        /* Animated border layer */
+        .value-card::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 13px;
+            padding: 1px;
+            background: conic-gradient(from var(--shine-angle), transparent 20%, #0ea5e9 40%, #3b82f6 50%, #8b5cf6 60%, #d946ef 80%, transparent 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            /* Soft float */
+        }
+
+        .value-card:hover::after {
+            opacity: 1;
+            animation: shineBorderAnim 3s linear infinite;
+        }
+
+        .value-number {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 5.5rem;
+            font-weight: 300;
+            line-height: 1;
+            z-index: 0;
+            user-select: none;
+
+            /* Gradient text */
+            background: linear-gradient(135deg, #0ea5e9, #3b82f6, #8b5cf6, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+
+            opacity: 0.15;
+            transition: opacity 0.4s ease;
+        }
+
+        .value-card:hover .value-number {
+            opacity: 0.6;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 1rem 0;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-card p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Leadership Grid */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .leader-card {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: #fff;
+            background-clip: padding-box;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid transparent;
+            transition: all 0.4s ease;
+            z-index: 1;
+        }
+
+        .leader-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 13px;
+            background: #eaeaea;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .leader-card::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 13px;
+            padding: 1px;
+            background: conic-gradient(from var(--shine-angle), transparent 20%, #0ea5e9 40%, #3b82f6 50%, #8b5cf6 60%, #d946ef 80%, transparent 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .leader-card:hover::after {
+            opacity: 1;
+            animation: shineBorderAnim 3s linear infinite;
+        }
+
+        .leader-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background-color: #f9f9f9;
+            border: 1px dashed #d1d1d1;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+        }
+
+        .leader-card:hover .leader-image {
+            background-color: #f0f0f0;
+            border-color: #aaa;
+            color: #888;
+        }
+
+        .leader-info h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 0.3rem 0;
+        }
+
+        .leader-info p {
+            font-size: 0.95rem;
+            color: #888;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        /* Call to Action Banner */
+        .cta-banner {
+            background-color: #030303;
+            color: #fff;
+            padding: 80px 5rem;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .cta-banner h2 {
+            font-size: 3rem;
+            font-weight: 400;
+            margin: 0 0 2rem 0;
+            letter-spacing: -1px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive adjustments for new sections */
+        @media (max-width: 1024px) {
+
+            .values-section,
+            .leadership-section,
+            .cta-banner {
+                padding: 60px 2rem;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .leadership-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar" style="background: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Orionac Logo" class="logo-img"></a>
+        </div>
+        <nav class="nav-links">
+            <div class="nav-item">
+                <a href="index.html#hero">PRODUCT</a>
+                <div class="nav-hover-card">
+                    <div class="hover-card-content">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="#">AI Models</a></li>
+                            <li><a href="#">Agent Framework</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#bronn-section">SOLUTIONS</a>
+                <div class="nav-hover-card">
+                    <div class="hover-card-content">
+                        <h4>Use Cases</h4>
+                        <ul>
+                            <li><a href="#">Enterprise Search</a></li>
+                            <li><a href="#">Market Analysis</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#hero">RESEARCH</a>
+                <div class="nav-hover-card">
+                    <div class="hover-card-content">
+                        <h4>Our Lab</h4>
+                        <ul>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Open Source</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#bronn-section">EDUCATION</a>
+                <div class="nav-hover-card">
+                    <div class="hover-card-content">
+                        <h4>Learning</h4>
+                        <ul>
+                            <li><a href="#">LiftUP Cohort</a></li>
+                            <li><a href="#">Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#hero">COMPANY</a>
+                <div class="nav-hover-card">
+                    <div class="hover-card-content">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="nav-actions">
+            <a href="#" class="btn-dark" style="background:#000; color:#fff;">CONTACT</a>
+        </div>
+    </header>
+
+    <!-- Map Section -->
+    <section class="map-section"
+        style="padding: 120px 2rem 60px; background-color: #ffffff; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;">
+
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <span
+                style="font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: #888; display: block; margin-bottom: 0.8rem;">OUR
+                PRESENCE</span>
+            <h2
+                style="font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 600; color: #111; margin: 0;">
+                Where We Operate</h2>
+        </div>
+
+        <div
+            style="width: 420px; height: 420px; border-radius: 50%; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04);">
+            <img src="map.png" alt="Our locations in India"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+    </section>
+
+
+
+    <section class="staggered-section">
+        <div class="staggered-container">
+            <!-- Row 1: Title and Line Animation -->
+            <div class="title-area">
+                <h1 class="staggered-title fade-in-blur">WHO WE ARE</h1>
+                <div class="elegant-animation">
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <!-- Row 2: Media Space (left), Text (right) -->
+            <div class="left-media-space">
+                <div class="floating-orb"></div>
+                <img src="image.png" alt="About Orionac" class="staggered-image">
+            </div>
+
+            <div class="staggered-text fade-in-blur delay-1">
+                <p>We are a research-focused technology organization mainly focused on the innovation and development of
+                    advanced AI concepts and intelligent agents.</p>
+
+                <p>Currently, we build scalable infrastructure and tools that help researchers and developers push the
+                    boundaries of what is possible. We value deep understanding above everything else, meaning that we
+                    won't take 'OK' as an answer when perfection is within reach.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Banner -->
+    <section class="vision-banner">
+        <h1>VISION<br> Past & Present</h1>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values-section">
+        <div class="section-header">
+            <h2>Core Principles</h2>
+            <p>The fundamental beliefs that guide our research, our product development, and how we interact with the
+                world.</p>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-number">01</div>
+                <h3>Research First</h3>
+                <p>We prioritize deep scientific understanding over rapid, shallow deployment. True innovation comes
+                    from rigorous exploration.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-number">02</div>
+                <h3>Agentic Scalability</h3>
+                <p>We believe the future of compute is defined by autonomous, interconnected agents capable of reasoning
+                    at massive scale.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-number">03</div>
+                <h3>Unyielding Security</h3>
+                <p>As AI capabilities grow, so must our defense mechanisms. Trust and data integrity are built into our
+                    foundation, not bolted on.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section">
+        <div class="section-header">
+            <h2>Leadership</h2>
+            <p>The minds driving the architecture of tomorrow.</p>
+        </div>
+
+        <div class="leadership-grid">
+            <div class="leader-card">
+                <div class="leader-image">Photo Placeholder</div>
+                <div class="leader-info">
+                    <h3>Rishi</h3>
+                    <p>Founder</p>
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image">Photo Placeholder</div>
+                <div class="leader-info">
+                    <h3>Arsalan Khan</h3>
+                    <p>Co-Founder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisory Board Section -->
+    <section style="background: #000; padding: 100px 2rem; text-align: center;">
+        <span
+            style="font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); display: block; margin-bottom: 1rem;">ADVISORY</span>
+        <h2
+            style="font-family: 'Poppins', sans-serif; font-size: 3.5rem; font-weight: 600; color: #fff; margin: 0 0 0.5rem 0;">
+            Advisory Board</h2>
+        <p
+            style="font-family: 'Poppins', sans-serif; font-size: 1.15rem; color: rgba(255,255,255,0.55); margin-bottom: 2.5rem;">
+            Coming Soon</p>
+        <a href="mailto:careers@orionac.in"
+            style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 40px; background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 25%, #8b5cf6 50%, #d946ef 100%); color: #fff; font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 1.5px; text-decoration: none; border-radius: 50px; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 35px rgba(139,92,246,0.3)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">APPLY NOW
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <!-- ORIONAC Marquee strip at very top of footer -->
+        <div class="footer-marquee-strip" aria-hidden="true">
+            <div class="footer-marquee-track">
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <!-- duplicate for seamless loop -->
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+                <span>ORIONAC</span><span class="fms">·</span>
+            </div>
+        </div>
+        <div class="footer-container">
+            <!-- Top Section: Brand + Nav Columns -->
+            <div class="footer-top">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap">
+                        <img src="footer.png" alt="Orionac Logo" class="footer-logo-img">
+                    </div>
+                    <p class="footer-tagline">RESEARCH FIRST. AI ALWAYS.</p>
+                    <p class="footer-brand-desc">Building the next generation of AI-first research tools and developer
+                        talent from India to the world.</p>
+                    <div class="footer-social-row">
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="X (Twitter)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="GitHub">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Instagram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nav Columns -->
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <div class="col-title">COMPANY</div>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Press</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="col-title">PRODUCTS</div>
+                        <a href="#">Bronn AI</a>
+                        <a href="#">LiftUP Cohort</a>
+                        <a href="#">Enterprise API</a>
+                        <a href="#">Research Hub</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="col-title">RESOURCES</div>
+                        <a href="#">Documentation</a>
+                        <a href="#">Research Papers</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Open Source</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <p class="copyright">&copy; 2026 Orionac Technologies Pvt. Ltd. &mdash; Made in India</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
