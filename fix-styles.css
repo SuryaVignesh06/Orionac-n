@@ -38,24 +38,110 @@
 }
 
 .liftup-content {
+    flex: 1;
+    max-width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
+.liftup-visual {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.liftup-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+.liftup-container,
+.join-team-container,
+.footer-container {
+    max-width: 100% !important;
+    padding: 0 4rem !important;
+    margin: 0 auto;
+}
+
+.liftup-logo {
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
 /* LiftUp Typography Adjustments */
-.gradient-text-anim {
+.liftup-headline {
     font-size: 4rem;
     line-height: 1.1;
     font-weight: 800;
     margin: 1.5rem 0;
-    background: linear-gradient(to right, #fff, #a5b4fc, #c4b5fd, #fff);
+    color: #fff;
+    letter-spacing: -1.5px;
+}
+
+.aurora-text {
+    background: linear-gradient(to right,
+            #ff5f56,
+            #ffbd2e,
+            #27c93f,
+            #00d2ff,
+            #8b5cf6,
+            #ff5f56);
     background-size: 200% auto;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: shineText 4s linear infinite;
+    animation: aurora-anim 4s linear infinite;
+    display: inline-block;
+}
+
+@keyframes aurora-anim {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Magic UI Highlighter Text Effects */
+.highlighter-text {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+}
+
+.highlighter-text.highlight {
+    color: #111;
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+.highlight-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 4px;
+    opacity: 0.2;
+}
+
+.highlighter-text.underline {
+    position: relative;
+    color: inherit;
+}
+
+.highlighter-text.underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--highlight-color);
 }
 
 .liftup-description {
@@ -113,7 +199,7 @@
         grid-template-columns: 1fr;
     }
 
-    .gradient-text-anim {
+    .liftup-headline {
         font-size: 3rem;
     }
 }
